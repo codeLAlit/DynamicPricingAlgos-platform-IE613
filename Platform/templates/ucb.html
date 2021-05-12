@@ -1,0 +1,53 @@
+{% load static %}
+<html>
+    <head>
+        <title>Dynamic Pricing - UCB1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'main.css' %}">
+    </head>
+    <body>
+        {% include 'header.html' %}
+        <div class="container">
+            <div class="row thompson">
+                <h2>UCB1</h2>
+                <form id="data_form">
+                    <label for="algos">Choose a UCB1 Algo</label>
+                    <select name="algo" id="algos" form="algoform">
+                    <option value="ucbo">UCB1-O</option>
+                    <option value="ucbp">UCB1-P</option>
+                    <option value="ucbpo">UCB1-PO</option>
+                    </select>
+                    <br>
+                    <label for="prices">Number of Prices for product</label>
+                    <input type="number" id="prices" name="num_prices" required value="1" min="1" max="100">
+                    <br>
+                    <label for="initial_prices">Prices for the item</label>
+                    <span id="initial_prices"> 
+
+                    </span>
+                    <br>
+                    <label for="mu_max">mu max Value</label>    
+                    <input type="number" id="mu_max" name="time_horizon" required value="0.01" min="0" max="1" step="0.001">
+                    <br>
+                    <label for="time_h">Time Horizon</label>    
+                    <input type="number" id="time_h" name="time_horizon" required value="2000" min="1" max="20000">
+                    <br><br>
+                    <button type ="button" onclick=createRequest()>Run Algorithm</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="container chart">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Regret Plot</h2>
+                    <canvas id="myChartline"></canvas>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="{% static 'ucb1.js' %}"></script>
+    </body>
+</html>

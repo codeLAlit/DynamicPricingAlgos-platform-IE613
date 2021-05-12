@@ -1,0 +1,50 @@
+{% load static %}
+<html>
+    <head>
+        <title>Dynamic Pricing</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'main.css' %}">
+    </head>
+    <body>
+        {% include 'header.html' %}
+        <div class="container">
+            <div class = "row">
+                <div class = "col-sm-6 col-md-3 card">
+                   <a href = "{% url 'thompson' %}" class = "thumbnail">
+                    <h3>Thompson Sampling </h3>
+                   </a>
+                </div>
+                
+                <div class = "col-sm-6 col-md-3 card">
+                   <a href = "{% url 'ucb1' %}" class = "thumbnail">
+                      <h3>UCB-1</h3>
+                   </a>
+                </div>
+                
+             </div>
+
+             <div class="row info">
+                 <h2>IE 613 Final Project: 2021</h2>
+                 <p>Implemented by:
+                     <ul>
+                         <li>Devak Sinha 180070017</li>
+                         <li>Rohan Jasani 180070025</li>
+                         <li>Lalit Saini 180070030</li>
+                     </ul>
+                 </p>
+                 <p>Based on:
+                    <ul>
+                        <li><a href="https://ewrl.files.wordpress.com/2015/02/ewrl12_2015_submission_23.pdf">Francesco Trovo, Stefano Paladino, Marcello Restelli, Nicola Gatti, "Multi–Armed Bandit for Pricing"</a></li>
+                        <li><a href="https://arxiv.org/pdf/1802.03050.pdf">Ravi Ganti, Matyas Sustik, Quoc Tran, and Brian Seaman "Thompson Sampling for Dynamic Pricing"</a></li>
+                    </ul>
+                </p>
+             </div>
+        </div>
+        
+        
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="{% static 'ts.js' %}"></script>
+    </body>
+</html>

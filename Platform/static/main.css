@@ -1,0 +1,102 @@
+body{
+    background: #edc0bf;
+    background: linear-gradient(90deg, #edc0bf 0,#c4caef 58%);
+
+}
+
+.info{
+    box-sizing: border-box;
+    border: dashed 1px rgb(133, 132, 132);
+    margin-top: 40px;
+    width: 60%;
+    padding: 20px;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    font-family: 'Times New Roman', serif;
+}
+
+.info h2{
+    border-bottom: solid 2px rgb(116, 116, 116);
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+  
+  .navbar .navbar-collapse {
+    text-align: center;
+  }
+  
+.row{
+    place-items: center;
+}
+
+.header{
+    background: rgb(78, 151, 247);
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 5px;
+    place-items: center;
+}
+
+.header a{
+    font-size: 20px;
+    font-weight: 10;
+    color: rgb(3, 16, 20);
+}
+
+
+.card{
+    place-content: center;
+    place-items: center;
+    text-decoration: none;
+    padding: 0px;
+    box-shadow: 5px 10px rgb(6, 39, 131) ;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background: rgba(255, 255, 255, 0.356);
+    
+}
+
+.thumbnail{
+    margin-bottom: 0px;
+}
+.card a{
+    text-decoration: none;
+}
+
+.thompson{
+    box-sizing: border-box;
+    border: solid 1px rgb(133, 132, 132);
+    padding: 10px 10px 30px 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.thompson h2{
+    border-bottom: solid 2px rgb(116, 116, 116);
+    margin-bottom: 40px;
+}
+.chart{
+    box-sizing: border-box;
+    border: solid 1px rgb(133, 132, 132);
+    padding: 10px 10px 30px 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.chart h2{
+    border-bottom: solid 2px rgb(116, 116, 116);
+    margin-bottom: 40px;
+}
+
+#constraint_set{
+    visibility: hidden;
+}
